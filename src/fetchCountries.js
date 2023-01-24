@@ -39,7 +39,9 @@ export function fetchCountries(name) {
         const languages = [];
 
         r[0].languages.forEach(el => {
-          if (el.iso639_1) languages.push(el.name);
+          if (el.iso639_1) {
+            languages.push(el.name);
+          }
         });
 
         const countryHeader = document.createElement('h3');
